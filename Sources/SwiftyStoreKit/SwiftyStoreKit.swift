@@ -217,7 +217,7 @@ extension SwiftyStoreKit {
     
     /// Register a handler for `SKPaymentQueue.shouldAddStorePayment` delegate method.
     /// - requires: iOS 11.0+
-    public static var shouldAddStorePaymentHandler: ShouldAddStorePaymentHandler? {
+    nonisolated(unsafe) public static var shouldAddStorePaymentHandler: ShouldAddStorePaymentHandler? {
         didSet {
             sharedInstance.paymentQueueController.shouldAddStorePaymentHandler = shouldAddStorePaymentHandler
         }
