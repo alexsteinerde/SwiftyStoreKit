@@ -67,7 +67,7 @@ extension SKPaymentTransaction {
     
 }
 
-extension SKPaymentTransactionState: CustomDebugStringConvertible {
+extension SKPaymentTransactionState: @retroactive CustomDebugStringConvertible {
     
     public var debugDescription: String {
         switch self {
